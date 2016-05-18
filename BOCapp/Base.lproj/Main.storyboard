@@ -105,7 +105,18 @@
                             <outlet property="delegate" destination="Wr6-Qb-MRo" id="GLS-Am-DMa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Trip Feed" id="t0i-fn-hC6"/>
+                    <navigationItem key="navigationItem" title="Trip Feed" id="t0i-fn-hC6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ex7-x0-WV0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ord-Ab-jAi">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="Wr6-Qb-MRo" eventType="touchUpInside" id="U4h-KM-Kn8"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="EcU-3r-AII" kind="show" id="X4M-vs-uqB"/>
                         <segue destination="g1F-FM-WE9" kind="presentation" identifier="Show Login" id="aZn-57-4JH"/>
