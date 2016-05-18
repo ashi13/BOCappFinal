@@ -129,15 +129,19 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
     }
     */
 
+    
     /* User logout button */
-    @IBAction func logoutPressed(sender: UIButton) {
-        
+    @IBAction func logoutPressed(sender: UIBarButtonItem) {
+        logoutUser()
+    }
+    
+    func logoutUser() {
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "userLoggedin")
         NSUserDefaults.standardUserDefaults().synchronize()
         
         self.performSegueWithIdentifier("Show Login", sender: self)
-        
     }
+    
     
     
     // MARK: - Navigation

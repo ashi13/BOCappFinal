@@ -13,6 +13,11 @@ class RegisterUserViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordRepeatTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var classYearTextField: UITextField!
+    
     
     @IBOutlet weak var registerView: UIScrollView!
     
@@ -43,26 +48,34 @@ class RegisterUserViewController: UIViewController {
     @IBAction func registerPressed(sender: UIButton) {
         let username = usernameTextField.text
         let password = passwordTextField.text
+        let repeatPassword = passwordRepeatTextField.text
+        let firstName = firstNameTextField.text
+        let lastName = lastNameTextField.text
+        let classYear = classYearTextField.text
         
         // Check empty fields
-        if (username!.isEmpty || password!.isEmpty) {
-            
-            // Alert message
-            displayAlert("All fields required")
-            
-            return;
-            
-            
+        if username!.isEmpty || password!.isEmpty {
+            displayAlert("Please fill in username and password")
         }
         
         // Check to see if password fields match
-            // Show alert message if they do no match
-        
-        
+        else if password != repeatPassword {
+            displayAlert("Passwords do not match")
+        }
+        else if firstName!.isEmpty || lastName!.isEmpty {
+            displayAlert("Please fill in your name")
+        }
+        else if classYear!.isEmpty {
+            displayAlert("Please fill in your class year")
+        }
         
         // Store data
         NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
         NSUserDefaults.standardUserDefaults().setObject(password, forKey: "password")
+        NSUserDefaults.standardUserDefaults().setObject(firstName, forKey: "firstName")
+        NSUserDefaults.standardUserDefaults().setObject(lastName, forKey: "lastName")
+        NSUserDefaults.standardUserDefaults().setObject(classYear, forKey: "classYear")
+        
         NSUserDefaults.standardUserDefaults().synchronize()
         
         // Confirmation alert message
