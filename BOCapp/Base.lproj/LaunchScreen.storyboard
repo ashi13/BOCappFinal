@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowdoin Outing Club" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGN-l9-GjH">
+                                <rect key="frame" x="145" y="279" width="311" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Murowchick and Alex Shi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYJ-YZ-KgS">
+                                <rect key="frame" x="32" y="570" width="536" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Exi-M5-bgF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Exi-M5-bgF"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.080016418069999998" green="0.28067860700000002" blue="0.074110108159999993" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="169" id="8s4-b4-Ham"/>
+                            <constraint firstItem="MYJ-YZ-KgS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EfT-74-tbl"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="85" id="GQx-Xg-TUv"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MYJ-YZ-KgS" secondAttribute="bottom" constant="8" symbolic="YES" id="NXV-oW-BX8"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Na5-Fc-JCd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MYJ-YZ-KgS" secondAttribute="trailing" constant="12" id="OPM-qO-RFj"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pou-7r-smd"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MYJ-YZ-KgS" secondAttribute="bottom" constant="8" id="Sy9-QL-RB5"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="OGN-l9-GjH" secondAttribute="bottom" constant="190" id="aDx-Y1-IqW"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="centerX" secondItem="MYJ-YZ-KgS" secondAttribute="centerX" id="bcx-ko-zgp"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="85" id="d0h-Hn-fIW"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MYJ-YZ-KgS" secondAttribute="bottom" constant="8" id="dRZ-Zn-VjK"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fSD-UC-iia"/>
+                            <constraint firstItem="MYJ-YZ-KgS" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="505" id="fk0-JQ-uqH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OGN-l9-GjH" secondAttribute="trailing" constant="84" id="ofj-gs-mRF"/>
+                            <constraint firstItem="MYJ-YZ-KgS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="12" id="r6K-he-t3u"/>
+                            <constraint firstItem="MYJ-YZ-KgS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="12" id="tHB-Fh-tu6"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="85" id="xA4-za-ttC"/>
+                            <constraint firstItem="MYJ-YZ-KgS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="12" id="yOK-lA-Bd0"/>
+                            <constraint firstItem="OGN-l9-GjH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zZX-k4-QbJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8s4-b4-Ham"/>
+                                <exclude reference="GQx-Xg-TUv"/>
+                                <exclude reference="bcx-ko-zgp"/>
+                                <exclude reference="d0h-Hn-fIW"/>
+                                <exclude reference="fSD-UC-iia"/>
+                                <exclude reference="ofj-gs-mRF"/>
+                                <exclude reference="xA4-za-ttC"/>
+                                <exclude reference="zZX-k4-QbJ"/>
+                                <exclude reference="OPM-qO-RFj"/>
+                                <exclude reference="fk0-JQ-uqH"/>
+                                <exclude reference="r6K-he-t3u"/>
+                                <exclude reference="yOK-lA-Bd0"/>
+                                <exclude reference="NXV-oW-BX8"/>
+                                <exclude reference="Sy9-QL-RB5"/>
+                                <exclude reference="aDx-Y1-IqW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+</document>
