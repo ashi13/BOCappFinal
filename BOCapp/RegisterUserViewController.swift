@@ -14,14 +14,23 @@ class RegisterUserViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var registerView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
+        registerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
+        
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

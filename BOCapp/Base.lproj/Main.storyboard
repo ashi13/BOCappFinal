@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FvQ-uX-KHk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FvQ-uX-KHk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -411,25 +411,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdp-Ne-Qc7">
-                                        <rect key="frame" x="231" y="80" width="138" height="18"/>
+                                        <rect key="frame" x="231" y="20" width="138" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u15-dT-cP7">
-                                        <rect key="frame" x="265" y="118" width="71" height="18"/>
+                                        <rect key="frame" x="265" y="58" width="71" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51P-iT-8ZO">
-                                        <rect key="frame" x="267" y="196" width="66" height="18"/>
+                                        <rect key="frame" x="267" y="136" width="66" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-1Y-jkj">
-                                        <rect key="frame" x="129" y="146" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="86" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="fp7-lf-2Um"/>
                                         </constraints>
@@ -437,7 +437,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28F-85-Ct1">
-                                        <rect key="frame" x="129" y="224" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="164" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="PkN-3k-BIA"/>
                                         </constraints>
@@ -445,13 +445,13 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Confirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fB-dJ-BI7">
-                                        <rect key="frame" x="221" y="274" width="159" height="18"/>
+                                        <rect key="frame" x="221" y="214" width="159" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PasswordRepeat" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ls9-HL-nxQ">
-                                        <rect key="frame" x="129" y="302" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="242" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="ID7-Fq-CgU"/>
                                         </constraints>
@@ -459,13 +459,13 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-1h-cjr">
-                                        <rect key="frame" x="263" y="352" width="74" height="18"/>
+                                        <rect key="frame" x="263" y="292" width="74" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FirstName" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epf-mi-MeW">
-                                        <rect key="frame" x="129" y="380" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="320" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="Zrz-Pk-m9p"/>
                                         </constraints>
@@ -473,13 +473,13 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-b5-vlQ">
-                                        <rect key="frame" x="263" y="430" width="74" height="18"/>
+                                        <rect key="frame" x="263" y="370" width="74" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LastName" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enY-vK-s1p">
-                                        <rect key="frame" x="129" y="458" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="398" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="Bep-ME-mRB"/>
                                         </constraints>
@@ -487,13 +487,13 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-Zd-dF1">
-                                        <rect key="frame" x="265" y="508" width="72" height="18"/>
+                                        <rect key="frame" x="265" y="448" width="72" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ClassYear" borderStyle="roundedRect" placeholder="Class Year" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nyk-w5-TTA">
-                                        <rect key="frame" x="129" y="536" width="343" height="30"/>
+                                        <rect key="frame" x="129" y="476" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="3dm-5B-ND4"/>
                                         </constraints>
@@ -501,7 +501,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Cy-hye">
-                                        <rect key="frame" x="272" y="601" width="57" height="30"/>
+                                        <rect key="frame" x="272" y="541" width="57" height="30"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="registerPressed:" destination="pAS-IU-MaS" eventType="touchUpInside" id="M18-hT-wWx"/>
@@ -543,8 +543,9 @@
                                     <constraint firstItem="enY-vK-s1p" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="bNO-Wr-PdQ"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="cRh-CM-rDA"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="28F-85-Ct1" secondAttribute="trailing" constant="10" id="cmX-KW-AHD"/>
-                                    <constraint firstItem="jdp-Ne-Qc7" firstAttribute="top" secondItem="NCJ-59-Lbo" secondAttribute="top" constant="80" id="cpT-Ft-huP"/>
+                                    <constraint firstItem="jdp-Ne-Qc7" firstAttribute="top" secondItem="NCJ-59-Lbo" secondAttribute="top" constant="20" id="cpT-Ft-huP"/>
                                     <constraint firstItem="jdp-Ne-Qc7" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="fqP-aZ-hyv"/>
+                                    <constraint firstAttribute="bottom" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="h47-1i-Z0s"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MXt-1Y-jkj" secondAttribute="trailing" constant="10" id="jke-yc-IAO"/>
                                     <constraint firstItem="ls9-HL-nxQ" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="joR-G3-Zok"/>
                                     <constraint firstItem="28F-85-Ct1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="lqi-fg-kK4"/>
@@ -565,6 +566,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="K3T-vy-1Zh"/>
                                         <exclude reference="cRh-CM-rDA"/>
                                     </mask>
                                 </variation>
@@ -574,6 +576,7 @@
                         <constraints>
                             <constraint firstItem="NCJ-59-Lbo" firstAttribute="leading" secondItem="wKL-AR-K1V" secondAttribute="leading" id="1KS-bo-0ae"/>
                             <constraint firstItem="NCJ-59-Lbo" firstAttribute="top" secondItem="wKL-AR-K1V" secondAttribute="top" id="88Y-qA-XER"/>
+                            <constraint firstItem="NCJ-59-Lbo" firstAttribute="bottom" secondItem="TXg-fD-OVZ" secondAttribute="top" id="S9Y-yC-72E"/>
                             <constraint firstItem="TXg-fD-OVZ" firstAttribute="top" secondItem="NCJ-59-Lbo" secondAttribute="bottom" id="epr-pW-rXp"/>
                             <constraint firstAttribute="trailing" secondItem="NCJ-59-Lbo" secondAttribute="trailing" id="fAK-gq-EP8"/>
                             <constraint firstAttribute="trailing" secondItem="NCJ-59-Lbo" secondAttribute="trailing" id="lc0-mJ-YBe"/>
@@ -587,6 +590,7 @@
                                 <exclude reference="fAK-gq-EP8"/>
                                 <exclude reference="xOS-cy-dQ1"/>
                                 <exclude reference="zCl-fZ-Hpt"/>
+                                <exclude reference="epr-pW-rXp"/>
                             </mask>
                         </variation>
                     </view>
@@ -595,6 +599,7 @@
                     <size key="freeformSize" width="600" height="700"/>
                     <connections>
                         <outlet property="passwordTextField" destination="28F-85-Ct1" id="9YB-XB-JHc"/>
+                        <outlet property="registerView" destination="NCJ-59-Lbo" id="RZI-dU-gc7"/>
                         <outlet property="usernameTextField" destination="MXt-1Y-jkj" id="d5t-Sw-7ap"/>
                     </connections>
                 </viewController>
@@ -770,6 +775,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Tt-5X-cL1"/>
+        <segue reference="Ni9-QV-foI"/>
     </inferredMetricsTieBreakers>
 </document>
