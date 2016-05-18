@@ -370,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="450" y="-341"/>
         </scene>
-        <!--View Controller-->
+        <!--Register User View Controller-->
         <scene sceneID="I8F-qi-LMi">
             <objects>
-                <viewController id="pAS-IU-MaS" sceneMemberID="viewController">
+                <viewController id="pAS-IU-MaS" customClass="RegisterUserViewController" customModule="BOCapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wjg-8b-AsF"/>
                         <viewControllerLayoutGuide type="bottom" id="TXg-fD-OVZ"/>
@@ -413,6 +413,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Cy-hye">
                                 <rect key="frame" x="272" y="401" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="pAS-IU-MaS" eventType="touchUpInside" id="M18-hT-wWx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -433,6 +436,10 @@
                             <constraint firstItem="MXt-1Y-jkj" firstAttribute="trailing" secondItem="28F-85-Ct1" secondAttribute="trailing" id="wu2-iw-yx8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="28F-85-Ct1" id="9YB-XB-JHc"/>
+                        <outlet property="usernameTextField" destination="MXt-1Y-jkj" id="d5t-Sw-7ap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RA3-NK-ByT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

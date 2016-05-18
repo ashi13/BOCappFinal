@@ -14,6 +14,7 @@
 		D309C58D1CE03E5A0056FD8A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D309C58C1CE03E5A0056FD8A /* SWRevealViewController.m */; };
 		D3DDCC341CE1828F00360FEC /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */; };
 		D3DDCC361CE18C6D00360FEC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DDCC351CE18C6D00360FEC /* UserProfile.swift */; };
+		D71A5C511CECD6DE00D1688F /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */; };
 		D76AD8911CE263BE00418278 /* TrippersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AD8901CE263BE00418278 /* TrippersTableViewCell.swift */; };
 		D77451211CC6883E00AB163F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77451201CC6883E00AB163F /* AppDelegate.swift */; };
 		D77451261CC6883E00AB163F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77451241CC6883E00AB163F /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		D309C58C1CE03E5A0056FD8A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		D3DDCC351CE18C6D00360FEC /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		D76AD8901CE263BE00418278 /* TrippersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrippersTableViewCell.swift; sourceTree = "<group>"; };
 		D774511D1CC6883E00AB163F /* BOCapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOCapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77451201CC6883E00AB163F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				D77451501CC68A6D00AB163F /* Trips.swift */,
 				D3DDCC351CE18C6D00360FEC /* UserProfile.swift */,
 				D78B859A1CE18FFB007627EB /* UserProfiles.swift */,
+				D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */,
 				D77451271CC6883E00AB163F /* Assets.xcassets */,
 				D77451291CC6883E00AB163F /* LaunchScreen.storyboard */,
 				D774512C1CC6883E00AB163F /* Info.plist */,
@@ -334,6 +337,7 @@
 				D77451211CC6883E00AB163F /* AppDelegate.swift in Sources */,
 				D309C58D1CE03E5A0056FD8A /* SWRevealViewController.m in Sources */,
 				D3DDCC341CE1828F00360FEC /* PaddingLabel.swift in Sources */,
+				D71A5C511CECD6DE00D1688F /* RegisterUserViewController.swift in Sources */,
 				2D2EC0031CCFFC1D0018E55C /* TripView.swift in Sources */,
 				D76AD8911CE263BE00418278 /* TrippersTableViewCell.swift in Sources */,
 				2D2EC0011CCFFB4F0018E55C /* FeedTableViewController.swift in Sources */,
