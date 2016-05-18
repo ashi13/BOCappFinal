@@ -12,6 +12,8 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
     
     // MARK: Properties
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var trips = [Trip]()
     
     /* Function loads predefined trips to show in trip feed */
@@ -30,6 +32,13 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
         
         // Load sample data
         loadSampleTrips()
+        
+        // For SWReveal sidebar
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         
 
