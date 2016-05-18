@@ -41,7 +41,11 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.performSegueWithIdentifier("Show Login", sender: self)
+        
+        let userLoggedin = NSUserDefaults.standardUserDefaults().boolForKey("userLoggedin")
+        if !userLoggedin {
+            self.performSegueWithIdentifier("Show Login", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {
