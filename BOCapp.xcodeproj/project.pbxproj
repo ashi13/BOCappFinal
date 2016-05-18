@@ -15,6 +15,7 @@
 		D3DDCC341CE1828F00360FEC /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */; };
 		D3DDCC361CE18C6D00360FEC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DDCC351CE18C6D00360FEC /* UserProfile.swift */; };
 		D70D23951CED095200C18563 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D23941CED095200C18563 /* ProfileViewController.swift */; };
+		D70D23971CED13DE00C18563 /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D23961CED13DE00C18563 /* CreateTripViewController.swift */; };
 		D71A5C511CECD6DE00D1688F /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */; };
 		D71A5C531CECDC6F00D1688F /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A5C521CECDC6F00D1688F /* UserLoginViewController.swift */; };
 		D76AD8911CE263BE00418278 /* TrippersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AD8901CE263BE00418278 /* TrippersTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		D3DDCC351CE18C6D00360FEC /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		D70D23941CED095200C18563 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D70D23961CED13DE00C18563 /* CreateTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
 		D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		D71A5C521CECDC6F00D1688F /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		D76AD8901CE263BE00418278 /* TrippersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrippersTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				D77451201CC6883E00AB163F /* AppDelegate.swift */,
 				D77451241CC6883E00AB163F /* Main.storyboard */,
+				D70D23961CED13DE00C18563 /* CreateTripViewController.swift */,
 				D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */,
 				D309C58E1CE03F4B0056FD8A /* SWRevealViewController */,
 				D7F796541CD96647009D8ECF /* Trip View */,
@@ -345,6 +348,7 @@
 				D309C58D1CE03E5A0056FD8A /* SWRevealViewController.m in Sources */,
 				D3DDCC341CE1828F00360FEC /* PaddingLabel.swift in Sources */,
 				D71A5C511CECD6DE00D1688F /* RegisterUserViewController.swift in Sources */,
+				D70D23971CED13DE00C18563 /* CreateTripViewController.swift in Sources */,
 				2D2EC0031CCFFC1D0018E55C /* TripView.swift in Sources */,
 				D70D23951CED095200C18563 /* ProfileViewController.swift in Sources */,
 				D76AD8911CE263BE00418278 /* TrippersTableViewCell.swift in Sources */,
