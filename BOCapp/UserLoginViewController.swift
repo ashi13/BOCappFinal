@@ -51,9 +51,24 @@ class UserLoginViewController: UIViewController {
         }
         
     }
-    
+    /*
+    @IBAction func registerPressed(sender: UIButton) {
+        performSegueWithIdentifier("ShowRegistration", sender: nil)
+    }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destination = segue.destinationViewController
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController!
+        }
+        
+        if segue.identifier == "ShowRegistration" {
+        
+            
+        }
+        
+    }
+    */
     
     /*
      // MARK: - Navigation
