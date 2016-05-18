@@ -11,14 +11,26 @@ import UIKit
 
 class UserProfile {
 
+    var isLeader: Bool
+    
     var firstName: String
     var lastName: String
     
-    init?(firstName: String, lastName: String){
+    var imageName: String
+    var image: UIImage?
+    
+    var classYear: Int
+    
+    init?(firstName: String, lastName: String, imageName: String, classYear: Int, isLeader: Bool){
         
         self.firstName = firstName
         self.lastName = lastName
         
-    
+        self.imageName = imageName
+        self.image = UIImage(named: imageName)
+        
+        self.classYear = classYear
+        
+        self.isLeader = isLeader
     }
 }

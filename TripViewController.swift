@@ -75,8 +75,10 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             tripName.text = trip.title
             tripDescription.text = trip.description
             tripLocation.text = trip.location
-            leaderName.text = trip.leaderName
-            leaderPicture.image = trip.leaderImage
+            
+            leaderName.text = trip.leader.firstName + " " + trip.leader.lastName
+            leaderPicture.image = trip.leader.image
+            
             tripAvailibility.text = String(10-trip.tripMembers.count) + "/10 spots available"
             
             

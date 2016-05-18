@@ -57,15 +57,21 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spots Filled" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-9d-CyY">
-                                            <rect key="frame" x="507" y="8" width="85" height="96"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Led by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-Sd-9Ui">
                                             <rect key="frame" x="170" y="63" width="113" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-On-alS">
+                                            <rect key="frame" x="554" y="8" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Spots Filled" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-9d-CyY">
+                                            <rect key="frame" x="507" y="44" width="85" height="60"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -77,16 +83,24 @@
                                         <constraint firstItem="FvX-Kj-7c4" firstAttribute="leading" secondItem="ITW-yI-KD9" secondAttribute="trailing" constant="21" id="8TQ-wA-4uQ"/>
                                         <constraint firstItem="Eag-9d-CyY" firstAttribute="bottom" secondItem="DGl-cX-Yw1" secondAttribute="bottomMargin" id="Gb2-Ee-AJd"/>
                                         <constraint firstItem="ITW-yI-KD9" firstAttribute="top" secondItem="DGl-cX-Yw1" secondAttribute="topMargin" id="Jc6-WO-cqP"/>
-                                        <constraint firstItem="Eag-9d-CyY" firstAttribute="top" secondItem="DGl-cX-Yw1" secondAttribute="topMargin" id="bC4-DP-dbo"/>
+                                        <constraint firstItem="2h5-On-alS" firstAttribute="trailing" secondItem="DGl-cX-Yw1" secondAttribute="trailingMargin" id="QEr-1R-8LD"/>
+                                        <constraint firstItem="Eag-9d-CyY" firstAttribute="top" secondItem="DGl-cX-Yw1" secondAttribute="topMargin" constant="5" id="bC4-DP-dbo"/>
                                         <constraint firstItem="S82-Lv-Bbb" firstAttribute="top" secondItem="DGl-cX-Yw1" secondAttribute="topMargin" id="gPv-gI-GY0"/>
                                         <constraint firstItem="rhe-fR-sqb" firstAttribute="bottom" secondItem="DGl-cX-Yw1" secondAttribute="bottomMargin" id="nbO-sD-9Oc"/>
                                         <constraint firstItem="Eag-9d-CyY" firstAttribute="trailing" secondItem="DGl-cX-Yw1" secondAttribute="trailingMargin" id="nbR-Kf-L9d"/>
                                         <constraint firstItem="FvX-Kj-7c4" firstAttribute="top" secondItem="S82-Lv-Bbb" secondAttribute="bottom" constant="1" id="rkw-VG-Iai"/>
                                         <constraint firstItem="rhe-fR-sqb" firstAttribute="top" secondItem="FvX-Kj-7c4" secondAttribute="bottom" constant="3" id="sEO-dc-aIW"/>
                                         <constraint firstItem="Tlk-he-z6Y" firstAttribute="bottom" secondItem="DGl-cX-Yw1" secondAttribute="bottomMargin" id="tJc-d3-5hZ"/>
+                                        <constraint firstItem="2h5-On-alS" firstAttribute="top" secondItem="DGl-cX-Yw1" secondAttribute="topMargin" id="v9n-fS-yr3"/>
+                                        <constraint firstItem="Eag-9d-CyY" firstAttribute="top" secondItem="2h5-On-alS" secondAttribute="bottom" constant="5" id="yzT-kV-JSr"/>
                                         <constraint firstItem="S82-Lv-Bbb" firstAttribute="leading" secondItem="ITW-yI-KD9" secondAttribute="trailing" constant="8" id="z3q-PH-CY9"/>
                                         <constraint firstItem="rhe-fR-sqb" firstAttribute="leading" secondItem="ITW-yI-KD9" secondAttribute="trailing" constant="8" id="zTe-Dn-CiD"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="bC4-DP-dbo"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.96872122467771637" green="0.96872122467771637" blue="0.96872122467771637" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -816,7 +830,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoH-Vv-c4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="25"/>
+            <point key="canvasLocation" x="149" y="-83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7q7-Rm-RKU">
@@ -861,6 +875,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ni9-QV-foI"/>
+        <segue reference="Ior-cV-4Ls"/>
+        <segue reference="1Tt-5X-cL1"/>
     </inferredMetricsTieBreakers>
 </document>

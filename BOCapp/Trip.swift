@@ -17,29 +17,31 @@ class Trip {
     var imageName: String
     var image: UIImage?
     var location: String
+    var date: NSDate
     
+    /*
     var leaderName: String
     var leaderImageName: String
     var leaderImage: UIImage?
     var leaderDescription: String
+    */
     
+    var leader: UserProfile
     var description: String
     var tripMembers: [UserProfile]
     
     
     // MARK: Initialization
     
-    init?(title: String, imageName: String, leaderName: String, leaderImageName: String, leaderDescription: String, description: String, location: String, tripMembers: [UserProfile]){
+    init?(title: String, imageName: String, leader: UserProfile, description: String, location: String, date: NSDate, tripMembers: [UserProfile]){
         
         self.title = title
         self.imageName = imageName
         self.image = UIImage(named: imageName)
         self.location = location
+        self.date = date
         
-        self.leaderName = leaderName
-        self.leaderImageName = leaderImageName
-        self.leaderImage = UIImage(named: leaderImageName)
-        self.leaderDescription = leaderDescription
+        self.leader = leader
         
         self.description = description
         self.tripMembers = tripMembers

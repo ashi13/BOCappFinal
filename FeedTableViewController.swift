@@ -19,7 +19,8 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
     /* Function loads predefined trips to show in trip feed */
     func loadSampleTrips() {
         
-        trips = [Trips().kayakTrip!, Trips().mountainTrip!, Trips().whiteWater!, Trips().hiking1!, Trips().hiking2!, Trips().surfing!, Trips().surfing2!]
+        trips = [Trips().kayakTrip!]
+                 //Trips().mountainTrip!, Trips().whiteWater!, Trips().hiking1!, Trips().hiking2!, Trips().surfing!, Trips().surfing2!]
         
     }
     
@@ -86,8 +87,8 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
         cell.tripName.text = trip.title
         cell.tripPicture.image = trip.image
         cell.tripLocation.text = trip.location
-        cell.leaderPicture.image = trip.leaderImage
-        cell.leaderName.text = trip.leaderName
+        cell.leaderPicture.image = trip.leader.image
+        cell.leaderName.text = trip.leader.firstName + " " + trip.leader.lastName
         cell.tripCapacity.text = String(trip.tripMembers.count) + "/10"
         
         return cell
