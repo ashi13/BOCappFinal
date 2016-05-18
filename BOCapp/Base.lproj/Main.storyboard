@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="377"/>
+            <point key="canvasLocation" x="1785" y="369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wEL-Br-CFu">
@@ -730,13 +730,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-qD-XGP">
-                                                    <rect key="frame" x="25" y="15" width="54" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox4-vD-eHo">
+                                                    <rect key="frame" x="25" y="19" width="85" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="Logout"/>
-                                                </button>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="H8N-9Z-iV7" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="nKN-Ra-aDq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -749,7 +753,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQK-0D-c86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1861" y="-324"/>
+            <point key="canvasLocation" x="-1905" y="-586"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="csG-Cb-XzW">
@@ -855,6 +859,30 @@
             </objects>
             <point key="canvasLocation" x="-628" y="1287"/>
         </scene>
+        <!--Create a Trip-->
+        <scene sceneID="Kel-U7-EzD">
+            <objects>
+                <viewController id="l8f-55-A7V" customClass="CreateTripViewController" customModule="BOCapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tqY-ji-YSZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6r-3p-gO7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nb7-YV-FHC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create a Trip" id="iWL-5e-YPb">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ODZ-Ei-m9g"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="ODZ-Ei-m9g" id="sTk-bC-vAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hD-Us-Mg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="-1399"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="J7Q-Rv-osH">
             <objects>
@@ -873,9 +901,27 @@
             </objects>
             <point key="canvasLocation" x="-1163" y="-586"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2hK-28-J5m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8N-9Z-iV7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ue1-XW-qLf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l8f-55-A7V" kind="relationship" relationship="rootViewController" id="mQ6-FA-Mrv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vje-O2-xF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1155" y="-1399"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ior-cV-4Ls"/>
-        <segue reference="1Tt-5X-cL1"/>
+        <segue reference="Ni9-QV-foI"/>
     </inferredMetricsTieBreakers>
 </document>
