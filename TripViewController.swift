@@ -105,6 +105,8 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
         
+        tripAvailibility.text = String(10-(trip?.tripMembers.count)!) + "/10 spots available"
+        
     }
     
     func confirmationAlert() {
@@ -117,6 +119,11 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        loadView()
+//    }
+    
     
     
     override func viewDidLoad() {
