@@ -1191,7 +1191,6 @@
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="capacityPicker" destination="ysB-9p-7IR" id="yRj-kL-DGl"/>
-                        <outlet property="createTripPressed" destination="d2z-bf-KQY" id="C6B-z8-pn5"/>
                         <outlet property="createTripView" destination="FYy-EU-kRw" id="qeD-r5-TzE"/>
                         <outlet property="leaderPicker" destination="Rxa-YK-bxL" id="NHL-AU-sjc"/>
                         <outlet property="location" destination="M7U-G0-62t" id="UGq-Aj-nAH"/>
