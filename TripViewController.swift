@@ -82,10 +82,32 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func joinPressed(sender: UIBarButtonItem) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        var currentUser = UserProfile(firstName: defaults.stringForKey("firstName")!, lastName: defaults.stringForKey("lastName")!, classYear: Int(defaults.stringForKey("classYear")!)!, isLeader: true)
         
+        let firstName = defaults.stringForKey("firstName")!
+        let lastName = defaults.stringForKey("lastName")!
+        let classYear = defaults.integerForKey("classYear")
         
+        let currentUser = UserProfile(firstName: firstName, lastName: lastName, classYear: classYear, isLeader: true)
+        
+    
+        
+        //var currentUser = UserProfile(firstName: defaults.stringForKey("firstName")!, lastName: defaults.stringForKey("lastName")!, classYear: Int(defaults.stringForKey("classYear")!)!, isLeader: true)
+        
+        print(trip?.tripMembers.count)
         trip?.tripMembers.append(currentUser)
+        confirmationAlert()
+        print(trip?.tripMembers.count)
+        
+    }
+    
+    func confirmationAlert() {
+        let alert = UIAlertController(title: "Alert", message: "Welcome Aboard", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let confirm = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.Default, handler: { action in self.dismissViewControllerAnimated(true, completion: nil) } )
+        
+        alert.addAction(confirm)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
     
