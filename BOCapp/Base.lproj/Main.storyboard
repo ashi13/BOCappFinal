@@ -107,6 +107,7 @@
                                     <outlet property="leaderName" destination="Tlk-he-z6Y" id="1o5-Pq-s99"/>
                                     <outlet property="leaderPicture" destination="rhe-fR-sqb" id="bwU-LY-083"/>
                                     <outlet property="tripCapacity" destination="Eag-9d-CyY" id="UEW-Jq-8pR"/>
+                                    <outlet property="tripDate" destination="2h5-On-alS" id="1Uj-8v-hca"/>
                                     <outlet property="tripLocation" destination="FvX-Kj-7c4" id="igJ-M7-LfH"/>
                                     <outlet property="tripName" destination="S82-Lv-Bbb" id="mlj-k7-V2T"/>
                                     <outlet property="tripPicture" destination="ITW-yI-KD9" id="1fT-oJ-glu"/>

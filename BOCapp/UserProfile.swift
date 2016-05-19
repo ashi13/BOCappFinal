@@ -21,6 +21,8 @@ class UserProfile {
     
     var classYear: Int
     
+    var trips = [Trip]()
+    
     init?(firstName: String, lastName: String, imageName: String, classYear: Int, isLeader: Bool){
         
         self.firstName = firstName
