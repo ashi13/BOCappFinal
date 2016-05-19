@@ -9,7 +9,7 @@
 import UIKit
 
 class CreateTripViewController: UIViewController {
-
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
