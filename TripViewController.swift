@@ -15,6 +15,7 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tripPicture: UIImageView!
     @IBOutlet weak var tripName: PaddingLabel!
     @IBOutlet weak var tripLocation: PaddingLabel!
+    @IBOutlet weak var tripDate: PaddingLabel!
     @IBOutlet weak var tripDescription: PaddingLabel!
     @IBOutlet weak var leaderName: PaddingLabel!
     @IBOutlet weak var leaderPicture: UIImageView!
@@ -95,6 +96,11 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             leaderPicture.image = trip.leader.image
             
             tripAvailibility.text = String(10-trip.tripMembers.count) + "/10 spots available"
+            
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+            
+            tripDate.text = formatter.stringFromDate(trip.date)
             
             
             tripName.sizeToFit()
