@@ -104,7 +104,6 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(trip?.tripMembers.count)
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
-        
     }
     
     func confirmationAlert() {
