@@ -27,6 +27,7 @@ class ProfileViewController: UIViewController {
         }
         
         name.text = NSUserDefaults.standardUserDefaults().stringForKey("firstName")
+        
 
         // Do any additional setup after loading the view.
     }

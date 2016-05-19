@@ -86,13 +86,13 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
         cell.tripName.text = trip.title
         
         cell.tripPicture.image = trip.image
-        cell.tripPicture.layer.cornerRadius = 2.0
+        cell.tripPicture.layer.cornerRadius = 8.0
         cell.tripPicture.clipsToBounds = true
         
         cell.tripLocation.text = trip.location
         
         cell.leaderPicture.image = trip.leader.image
-        cell.leaderPicture.layer.cornerRadius = 3.0
+        cell.leaderPicture.layer.cornerRadius = 5.0
         cell.leaderPicture.clipsToBounds = true
         
         cell.leaderName.text = trip.leader.firstName + " " + trip.leader.lastName

@@ -42,7 +42,7 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let currentTrip = trip
+        let currentTrip = self.trip
         return currentTrip!.tripMembers.count
         
     }
@@ -102,7 +102,9 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             tripLocation.sizeToFit()
             leaderName.sizeToFit()
             
-            trippersTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TrippersTableViewCell")
+            //self.trippersTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TrippersViewTableCell")
+            //trippersTableView.delegate = self
+            //trippersTableView.dataSource = self
             
             
         }
