@@ -141,8 +141,8 @@
 			children = (
 				D77451201CC6883E00AB163F /* AppDelegate.swift */,
 				D77451241CC6883E00AB163F /* Main.storyboard */,
-				D70D23961CED13DE00C18563 /* CreateTripViewController.swift */,
 				D7E5AF211CEE2220003D5D03 /* SideBarTableViewController.swift */,
+				D70D23961CED13DE00C18563 /* CreateTripViewController.swift */,
 				D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */,
 				D309C58E1CE03F4B0056FD8A /* SWRevealViewController */,
 				D7F796541CD96647009D8ECF /* Trip View */,
@@ -155,6 +155,7 @@
 				D7F796551CD96661009D8ECF /* Trips */,
 				2D2EC0041CCFFC390018E55C /* Trip.swift */,
 				D77451501CC68A6D00AB163F /* Trips.swift */,
+				D7E5AF231CEE3F5E003D5D03 /* Login and Users */,
 				D3DDCC351CE18C6D00360FEC /* UserProfile.swift */,
 				D78B859A1CE18FFB007627EB /* UserProfiles.swift */,
 				D71A5C501CECD6DE00D1688F /* RegisterUserViewController.swift */,
@@ -183,6 +184,13 @@
 				D77451421CC6883E00AB163F /* Info.plist */,
 			);
 			path = BOCappUITests;
+			sourceTree = "<group>";
+		};
+		D7E5AF231CEE3F5E003D5D03 /* Login and Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Login and Users";
 			sourceTree = "<group>";
 		};
 		D7F796531CD96636009D8ECF /* Feed View */ = {
