@@ -18,6 +18,7 @@ class RegisterUserViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var classYearTextField: UITextField!
     
+    @IBOutlet weak var allergiesTextView: UITextView!
     
     @IBOutlet weak var registerView: UIScrollView!
     
@@ -52,6 +53,7 @@ class RegisterUserViewController: UIViewController {
         let firstName = firstNameTextField.text
         let lastName = lastNameTextField.text
         let classYear = classYearTextField.text
+        let allergies = allergiesTextView.text
         
         // Check empty fields
         if username!.isEmpty || password!.isEmpty {
@@ -75,6 +77,7 @@ class RegisterUserViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(firstName, forKey: "firstName")
         NSUserDefaults.standardUserDefaults().setObject(lastName, forKey: "lastName")
         NSUserDefaults.standardUserDefaults().setObject(classYear, forKey: "classYear")
+        NSUserDefaults.standardUserDefaults().setObject(allergies, forKey: "allergies")
         
         NSUserDefaults.standardUserDefaults().synchronize()
         

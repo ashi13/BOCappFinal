@@ -80,6 +80,15 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     
+    @IBAction func joinPressed(sender: UIBarButtonItem) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var currentUser = UserProfile(firstName: defaults.stringForKey("firstName")!, lastName: defaults.stringForKey("lastName")!, classYear: Int(defaults.stringForKey("classYear")!)!, isLeader: true)
+        
+        
+        trip?.tripMembers.append(currentUser)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,6 +23,32 @@ class UserProfile {
     
     var trips = [Trip]()
     
+    init() {
+        
+        self.firstName = ""
+        self.lastName = ""
+        
+        self.imageName = "stockUserPicture"
+        self.image = UIImage(named: "stockUserPicture")
+        
+        self.classYear = 2000
+        
+        self.isLeader = false
+    }
+    
+    init(firstName: String, lastName: String, classYear: Int, isLeader: Bool){
+        
+        self.firstName = firstName
+        self.lastName = lastName
+        
+        self.imageName = "stockUserPicture"
+        self.image = UIImage(named: "stockUserPicture")
+        
+        self.classYear = classYear
+        
+        self.isLeader = isLeader
+    }
+    
     init?(firstName: String, lastName: String, imageName: String, classYear: Int, isLeader: Bool){
         
         self.firstName = firstName

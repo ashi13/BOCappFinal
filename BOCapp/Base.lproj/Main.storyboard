@@ -327,7 +327,13 @@
                             <constraint firstAttribute="trailing" secondItem="XUS-eG-o9y" secondAttribute="trailing" id="Mho-8e-QMy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Trip Name" id="rZS-l8-06o"/>
+                    <navigationItem key="navigationItem" title="Trip Name" id="rZS-l8-06o">
+                        <barButtonItem key="rightBarButtonItem" title="Join" id="LOU-6k-mXg">
+                            <connections>
+                                <action selector="joinPressed:" destination="BYZ-38-t0r" id="15Q-Sw-Pd9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
@@ -465,11 +471,11 @@
                         <viewControllerLayoutGuide type="bottom" id="TXg-fD-OVZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wKL-AR-K1V">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCJ-59-Lbo">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdp-Ne-Qc7">
                                         <rect key="frame" x="231" y="20" width="138" height="18"/>
@@ -562,16 +568,33 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Cy-hye">
-                                        <rect key="frame" x="272" y="541" width="57" height="30"/>
+                                        <rect key="frame" x="272" y="654" width="57" height="30"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="registerPressed:" destination="pAS-IU-MaS" eventType="touchUpInside" id="M18-hT-wWx"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94q-Pw-Iwg">
+                                        <rect key="frame" x="272" y="526" width="59" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Allergies" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XHR-NH-ALh">
+                                        <rect key="frame" x="129" y="554" width="343" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="06R-H8-1pd"/>
+                                            <constraint firstAttribute="width" constant="343" id="OBV-bx-qWD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="51P-iT-8ZO" firstAttribute="top" secondItem="MXt-1Y-jkj" secondAttribute="bottom" constant="20" id="25S-hw-brA"/>
                                     <constraint firstItem="MXt-1Y-jkj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="2FP-WU-lqM"/>
+                                    <constraint firstItem="XHR-NH-ALh" firstAttribute="trailing" secondItem="Nyk-w5-TTA" secondAttribute="trailing" id="2we-CU-N85"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ls9-HL-nxQ" secondAttribute="trailing" constant="10" id="4dB-p0-jdp"/>
                                     <constraint firstItem="28F-85-Ct1" firstAttribute="top" secondItem="51P-iT-8ZO" secondAttribute="bottom" constant="10" id="4r5-II-WJ7"/>
                                     <constraint firstItem="Epf-mi-MeW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="5rf-jC-L5l"/>
@@ -596,20 +619,27 @@
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="P7P-de-TtH"/>
                                     <constraint firstItem="enY-vK-s1p" firstAttribute="top" secondItem="7lH-b5-vlQ" secondAttribute="bottom" constant="10" id="PGW-kd-ezq"/>
                                     <constraint firstItem="enY-vK-s1p" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="Q6T-h5-fVB"/>
+                                    <constraint firstItem="94q-Pw-Iwg" firstAttribute="centerX" secondItem="ks3-Zd-dF1" secondAttribute="centerX" id="RvK-XI-EOz"/>
                                     <constraint firstItem="51P-iT-8ZO" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="UDF-gV-mL7"/>
+                                    <constraint firstItem="XHR-NH-ALh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="UHC-EV-LdK"/>
                                     <constraint firstItem="vr2-Cy-hye" firstAttribute="top" secondItem="Nyk-w5-TTA" secondAttribute="bottom" constant="35" id="VNq-YO-rdu"/>
+                                    <constraint firstItem="XHR-NH-ALh" firstAttribute="top" secondItem="94q-Pw-Iwg" secondAttribute="bottom" constant="10" id="WAy-m2-v7k"/>
                                     <constraint firstItem="vr2-Cy-hye" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="Xd1-Fj-QHn"/>
                                     <constraint firstItem="4fB-dJ-BI7" firstAttribute="top" secondItem="28F-85-Ct1" secondAttribute="bottom" constant="20" id="Z0q-Ch-ZPX"/>
+                                    <constraint firstItem="XHR-NH-ALh" firstAttribute="leading" secondItem="Nyk-w5-TTA" secondAttribute="leading" id="ZU0-zN-NJi"/>
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="top" secondItem="ks3-Zd-dF1" secondAttribute="bottom" constant="10" id="ZWi-I8-VzF"/>
                                     <constraint firstItem="enY-vK-s1p" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="bNO-Wr-PdQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHR-NH-ALh" secondAttribute="trailing" constant="10" id="cGt-KY-pvB"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="cRh-CM-rDA"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="28F-85-Ct1" secondAttribute="trailing" constant="10" id="cmX-KW-AHD"/>
                                     <constraint firstItem="jdp-Ne-Qc7" firstAttribute="top" secondItem="NCJ-59-Lbo" secondAttribute="top" constant="20" id="cpT-Ft-huP"/>
                                     <constraint firstItem="jdp-Ne-Qc7" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="fqP-aZ-hyv"/>
-                                    <constraint firstAttribute="bottom" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="h47-1i-Z0s"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="h47-1i-Z0s"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MXt-1Y-jkj" secondAttribute="trailing" constant="10" id="jke-yc-IAO"/>
                                     <constraint firstItem="ls9-HL-nxQ" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="joR-G3-Zok"/>
+                                    <constraint firstItem="vr2-Cy-hye" firstAttribute="top" secondItem="XHR-NH-ALh" secondAttribute="bottom" constant="20" id="l48-kP-Qt6"/>
                                     <constraint firstItem="28F-85-Ct1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="lqi-fg-kK4"/>
+                                    <constraint firstItem="94q-Pw-Iwg" firstAttribute="top" secondItem="Nyk-w5-TTA" secondAttribute="bottom" constant="20" id="p8U-4f-Kfo"/>
                                     <constraint firstItem="7lH-b5-vlQ" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="quB-mG-Zo1"/>
                                     <constraint firstItem="28F-85-Ct1" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="r7e-aA-xsY"/>
                                     <constraint firstItem="u15-dT-cP7" firstAttribute="top" secondItem="jdp-Ne-Qc7" secondAttribute="bottom" constant="20" id="rEE-di-to0"/>
@@ -628,6 +658,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="K3T-vy-1Zh"/>
+                                        <exclude reference="VNq-YO-rdu"/>
                                         <exclude reference="cRh-CM-rDA"/>
                                     </mask>
                                 </variation>
@@ -657,8 +688,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="pvL-yR-YZZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="700"/>
+                    <size key="freeformSize" width="600" height="900"/>
                     <connections>
+                        <outlet property="allergiesTextView" destination="XHR-NH-ALh" id="ytO-D5-8rI"/>
                         <outlet property="classYearTextField" destination="Nyk-w5-TTA" id="9Cd-u7-c9Y"/>
                         <outlet property="firstNameTextField" destination="Epf-mi-MeW" id="pyh-QQ-TxK"/>
                         <outlet property="lastNameTextField" destination="enY-vK-s1p" id="hVM-ss-laS"/>
@@ -1149,12 +1181,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create Trip" id="28d-pa-jC6">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Ah0-u2-fpe"/>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="d2z-bf-KQY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="d2z-bf-KQY">
+                            <connections>
+                                <action selector="createTripPressed:" destination="dbu-xX-Hfo" id="Cc4-Fu-rMm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="capacityPicker" destination="ysB-9p-7IR" id="yRj-kL-DGl"/>
+                        <outlet property="createTripPressed" destination="d2z-bf-KQY" id="C6B-z8-pn5"/>
                         <outlet property="createTripView" destination="FYy-EU-kRw" id="qeD-r5-TzE"/>
                         <outlet property="leaderPicker" destination="Rxa-YK-bxL" id="NHL-AU-sjc"/>
                         <outlet property="location" destination="M7U-G0-62t" id="UGq-Aj-nAH"/>

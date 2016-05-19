@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol CreateTripDataSource : class {
+    func addTrip(trip: Trip)
+    func getLeaders() -> [UserProfile]
+}
+
 class CreateTripViewController: UIViewController {
+    
+    weak var dataSource: CreateTripDataSource?
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tripName: UITextView!
@@ -21,6 +28,24 @@ class CreateTripViewController: UIViewController {
     
     @IBOutlet weak var createTripView: UIScrollView!
     
+    @IBAction func createTripPressed(sender: UIBarButtonItem) {
+        
+        var leaderName = leaderPicker.description
+        
+        var allUsers = dataSource?.getLeaders()
+        
+        var leader = UserProfile()
+        for(var i = 0; i < allUsers!.count; i += 1){
+            if leaderName == String(allUsers![i].firstName + " " + allUsers![i].lastName) {
+                leader = allUsers![i]
+            }
+        }
+        
+        var currentTrip = Trip(title: tripName.description, image: tripImage.image!, leader: leader, description: tripDescription.description, location: location.description, date: tripDate.date, tripMembers: [leader])
+        
+        dataSource?.addTrip(currentTrip)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +55,8 @@ class CreateTripViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         createTripView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
+        
+        
         
     }
     
