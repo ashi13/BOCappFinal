@@ -174,16 +174,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Description" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw7-Bk-xuL" customClass="PaddingLabel" customModule="BOCapp" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="390" width="580" height="135"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="kbx-zr-TPp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIl-lC-TWO">
                                         <rect key="frame" x="8" y="533" width="84" height="84"/>
                                         <constraints>
@@ -268,6 +258,16 @@
                                         <rect key="frame" x="10" y="307" width="580" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Description" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw7-Bk-xuL" customClass="PaddingLabel" customModule="BOCapp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="390" width="580" height="135"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="kbx-zr-TPp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -977,11 +977,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="FYy-EU-kRw" customClass="TripView" customModule="BOCapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="936"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="FYy-EU-kRw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Location" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M7U-G0-62t">
-                                        <rect key="frame" x="9" y="50" width="582" height="40"/>
+                                        <rect key="frame" x="9" y="114" width="582" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="30a-BJ-WSo"/>
@@ -990,7 +990,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Trip Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cZF-Z5-1Ib">
-                                        <rect key="frame" x="9" y="205" width="582" height="140"/>
+                                        <rect key="frame" x="9" y="269" width="582" height="140"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="140" id="KcW-mm-2y6"/>
@@ -999,55 +999,55 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-aN-lcd">
-                                        <rect key="frame" x="9" y="-56" width="79" height="21"/>
+                                        <rect key="frame" x="9" y="8" width="79" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrv-8c-hex">
-                                        <rect key="frame" x="9" y="21" width="66" height="21"/>
+                                        <rect key="frame" x="9" y="85" width="66" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbp-Y2-zlp">
-                                        <rect key="frame" x="9" y="103" width="36" height="21"/>
+                                        <rect key="frame" x="9" y="167" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Leader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fe-Bs-Oz4">
-                                        <rect key="frame" x="9" y="353" width="87" height="21"/>
+                                        <rect key="frame" x="9" y="417" width="87" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-aD-9eL">
-                                        <rect key="frame" x="9" y="447" width="68" height="21"/>
+                                        <rect key="frame" x="9" y="511" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-mJ-vps">
-                                        <rect key="frame" x="9" y="524" width="47" height="21"/>
+                                        <rect key="frame" x="9" y="588" width="47" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvv-Jm-bug">
-                                        <rect key="frame" x="8" y="176" width="88" height="21"/>
+                                        <rect key="frame" x="8" y="240" width="88" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxa-YK-bxL">
-                                        <rect key="frame" x="9" y="382" width="582" height="57"/>
+                                        <rect key="frame" x="9" y="446" width="582" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="BF6-lc-MXK"/>
                                         </constraints>
                                     </pickerView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Trip Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-Tu-tSd">
-                                        <rect key="frame" x="9" y="-27" width="582" height="40"/>
+                                        <rect key="frame" x="9" y="37" width="582" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hVE-ge-ZJX"/>
@@ -1056,7 +1056,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6pK-so-gAh">
-                                        <rect key="frame" x="9" y="129" width="582" height="39"/>
+                                        <rect key="frame" x="9" y="193" width="582" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="5Mc-ez-4DW"/>
                                         </constraints>
@@ -1065,13 +1065,13 @@
                                         </date>
                                     </datePicker>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysB-9p-7IR">
-                                        <rect key="frame" x="8" y="476" width="583" height="40"/>
+                                        <rect key="frame" x="8" y="540" width="583" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="vwi-o9-3Vx"/>
                                         </constraints>
                                     </pickerView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Czc-DL-CJQ">
-                                        <rect key="frame" x="8" y="553" width="584" height="147"/>
+                                        <rect key="frame" x="8" y="617" width="584" height="147"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="147" id="bpQ-GK-yn5"/>
                                         </constraints>
@@ -1086,6 +1086,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Czc-DL-CJQ" secondAttribute="bottom" constant="108" id="AEW-va-kCF"/>
                                     <constraint firstItem="6pK-so-gAh" firstAttribute="trailing" secondItem="cZF-Z5-1Ib" secondAttribute="trailing" id="AjL-Ja-6x6"/>
                                     <constraint firstItem="6pK-so-gAh" firstAttribute="leading" secondItem="cZF-Z5-1Ib" secondAttribute="leading" id="AtB-A7-UYM"/>
+                                    <constraint firstItem="qf7-Tu-tSd" firstAttribute="centerX" secondItem="FYy-EU-kRw" secondAttribute="centerX" id="CnZ-hx-KTy"/>
                                     <constraint firstItem="ysB-9p-7IR" firstAttribute="top" secondItem="4X7-aD-9eL" secondAttribute="bottom" constant="8" id="Dhj-mW-EJf"/>
                                     <constraint firstItem="qf7-Tu-tSd" firstAttribute="top" secondItem="T0L-aN-lcd" secondAttribute="bottom" constant="8" id="Fl8-B7-1pJ"/>
                                     <constraint firstItem="M7U-G0-62t" firstAttribute="trailing" secondItem="6pK-so-gAh" secondAttribute="trailing" id="Hi2-9M-5DV"/>
@@ -1116,11 +1117,18 @@
                                     <constraint firstItem="M7U-G0-62t" firstAttribute="leading" secondItem="lbp-Y2-zlp" secondAttribute="leading" id="rlk-cD-BOi"/>
                                     <constraint firstItem="4X7-aD-9eL" firstAttribute="leading" secondItem="ubU-mJ-vps" secondAttribute="leading" id="tYY-9n-lUG"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nek-6Y-Gxm"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FYy-EU-kRw" firstAttribute="centerX" secondItem="bJh-h9-FHX" secondAttribute="centerX" id="2mM-k8-zXz"/>
+                            <constraint firstItem="FYy-EU-kRw" firstAttribute="top" secondItem="bJh-h9-FHX" secondAttribute="top" id="9Ie-K0-gp0"/>
+                            <constraint firstItem="0xj-la-477" firstAttribute="top" secondItem="FYy-EU-kRw" secondAttribute="bottom" id="Kbj-5J-Mon"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FYy-EU-kRw" secondAttribute="trailing" constant="-20" id="RS1-29-9OY"/>
                             <constraint firstItem="FYy-EU-kRw" firstAttribute="top" secondItem="Kam-3T-ONj" secondAttribute="bottom" id="Yz3-2B-J6H"/>
                             <constraint firstItem="T0L-aN-lcd" firstAttribute="top" secondItem="Kam-3T-ONj" secondAttribute="bottom" constant="8" id="c6f-uB-vLN"/>
@@ -1134,17 +1142,27 @@
                                 <exclude reference="2mM-k8-zXz"/>
                                 <exclude reference="RS1-29-9OY"/>
                                 <exclude reference="Yz3-2B-J6H"/>
+                                <exclude reference="erl-3H-MoS"/>
+                                <exclude reference="zIU-Lr-Hge"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Create Trip" id="28d-pa-jC6">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Ah0-u2-fpe"/>
-                        <barButtonItem key="rightBarButtonItem" title="Create Trip" id="d2z-bf-KQY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="d2z-bf-KQY"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="capacityPicker" destination="ysB-9p-7IR" id="yRj-kL-DGl"/>
+                        <outlet property="createTripView" destination="FYy-EU-kRw" id="qeD-r5-TzE"/>
+                        <outlet property="leaderPicker" destination="Rxa-YK-bxL" id="NHL-AU-sjc"/>
+                        <outlet property="location" destination="M7U-G0-62t" id="UGq-Aj-nAH"/>
                         <outlet property="menuButton" destination="Ah0-u2-fpe" id="sWI-eY-eAb"/>
+                        <outlet property="tripDate" destination="6pK-so-gAh" id="ST6-Wh-7m0"/>
+                        <outlet property="tripDescription" destination="cZF-Z5-1Ib" id="pyV-hT-Opy"/>
+                        <outlet property="tripImage" destination="Czc-DL-CJQ" id="hFZ-Et-fTr"/>
+                        <outlet property="tripName" destination="qf7-Tu-tSd" id="j4B-OP-wCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3E-DL-mp9" sceneMemberID="firstResponder"/>
