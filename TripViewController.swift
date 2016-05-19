@@ -117,6 +117,11 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+//    override func viewDidAppear(animated: Bool) {
+//        loadView()
+//    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

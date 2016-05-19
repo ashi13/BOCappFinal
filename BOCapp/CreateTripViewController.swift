@@ -30,22 +30,22 @@ class CreateTripViewController: UIViewController {
     
     @IBAction func createTripPressed(sender: UIBarButtonItem) {
         
-        var leaderName = leaderPicker.description
-        
+        let leaderName = leaderPicker.description
         var allUsers = dataSource?.getLeaders()
-        
         var leader = UserProfile()
-        for(var i = 0; i < allUsers!.count; i += 1){
+  
+        for i in 0...allUsers!.count {
             if leaderName == String(allUsers![i].firstName + " " + allUsers![i].lastName) {
                 leader = allUsers![i]
             }
         }
         
-        var currentTrip = Trip(title: tripName.description, image: tripImage.image!, leader: leader, description: tripDescription.description, location: location.description, date: tripDate.date, tripMembers: [leader])
+        let currentTrip = Trip(title: tripName.description, image: tripImage.image!, leader: leader, description: tripDescription.description, location: location.description, date: tripDate.date, tripMembers: [leader])
         
         dataSource?.addTrip(currentTrip)
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,14 +56,11 @@ class CreateTripViewController: UIViewController {
         }
         createTripView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
         
-        
-        
     }
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
     
     
     override func didReceiveMemoryWarning() {

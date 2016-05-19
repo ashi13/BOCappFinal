@@ -69,18 +69,7 @@ class SideBarTableViewController: UITableViewController {
         selectedMenuItem = indexPath.row
         
         print(selectedMenuItem)
-        
-//        let mainStoryBoard: UIStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-//        var destvc: UIViewController
-//        
-//        switch (indexPath.row) {
-//        case 0:
-//            destvc = mainStoryBoard.instantiateViewControllerWithIdentifier("View Controller 1")
-//        default:
-//            break
-//            
-//            
-//        }
+
         
     
         
