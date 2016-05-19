@@ -89,11 +89,17 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             navigationItem.title = trip.title
             tripPicture.image = trip.image
             tripName.text = trip.title
+            
             tripDescription.text = trip.description
+            tripDescription.lineBreakMode = .ByWordWrapping
+            tripDescription.numberOfLines = 0
+            
             tripLocation.text = trip.location
             
             leaderName.text = trip.leader.firstName + " " + trip.leader.lastName
             leaderPicture.image = trip.leader.image
+            leaderPicture.layer.cornerRadius = 6.0
+            leaderPicture.clipsToBounds = true
             
             tripAvailibility.text = String(10-trip.tripMembers.count) + "/10 spots available"
             

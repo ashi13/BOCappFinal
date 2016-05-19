@@ -11,6 +11,15 @@ import UIKit
 class CreateTripViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var tripName: UITextView!
+    @IBOutlet weak var location: UITextView!
+    @IBOutlet weak var tripDescription: UITextView!
+    @IBOutlet weak var tripDate: UIDatePicker!
+    @IBOutlet weak var capacityPicker: UIPickerView!
+    @IBOutlet weak var leaderPicker: UIPickerView!
+    @IBOutlet weak var tripImage: UIImageView!
+    
+    @IBOutlet weak var createTripView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +29,12 @@ class CreateTripViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        // Do any additional setup after loading the view.
+        createTripView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
+        
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     
