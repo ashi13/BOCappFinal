@@ -32,10 +32,11 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
 //    
 //    var model = Trips()
 
-    @IBOutlet weak var tripView: TripView!  // UIScrollView 
+    @IBOutlet weak var tripView: TripView!  // UIScrollView
     @IBOutlet weak var trippersTableView: UITableView!
-    var trip: Trip? // Pushed over by segue when selected from TableView
     
+    var trip: Trip? // Pushed over by segue when selected from TableView
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -47,22 +48,36 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let tripCellIdentifier = "TripperTableViewCell"
+        print("kjshfkjhsd")
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(tripCellIdentifier, forIndexPath: indexPath) as! TrippersTableViewCell
+        let tripperCellIdentifier = "TrippersTableViewCell"
         
-        let currentTrip = trip    // Grabs the right cell to load data to
+        let cell = tableView.dequeueReusableCellWithIdentifier(tripperCellIdentifier, forIndexPath: indexPath) as! TrippersTableViewCell
+        
+        
+        cell.tripperName.text = "Row #\(indexPath.row)"
+        //cell.detailTextLabel.text = "Subtitle #\(indexPath.row)"
+        
+        //let currentTrip = trip    // Grabs the right cell to load data to
+        //let tripMember = trip!.tripMembers[indexPath.row]
         
         // Load data to individual elements of TripTableViewCell
-        cell.tripperName.text = currentTrip!.tripMembers[indexPath.row].firstName + " " + currentTrip!.tripMembers[indexPath.row].lastName
+//        cell.tripperName.text = currentTrip!.tripMembers[indexPath.row].firstName + " " + currentTrip!.tripMembers[indexPath.row].lastName
+        
+        //cell.tripperName.text = tripMember.firstName
+        //cell.tripperName.text = "aksjdakj::"
         
         return cell
     }
     
-    
-    
+
     
     
     override func viewDidLoad() {
@@ -87,9 +102,12 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             tripLocation.sizeToFit()
             leaderName.sizeToFit()
             
+            trippersTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TrippersTableViewCell")
             
             
         }
+
+        
     }
     
 

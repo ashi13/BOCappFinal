@@ -11,6 +11,7 @@ import UIKit
 class TrippersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tripperName: PaddingLabel!
+    @IBOutlet weak var tripperImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

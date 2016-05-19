@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FvQ-uX-KHk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FvQ-uX-KHk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -209,26 +209,49 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-j7-0Ug">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-j7-0Ug">
                                         <rect key="frame" x="8" y="710" width="584" height="218"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripperTableViewCell" id="frr-VC-Tva" customClass="TrippersTableViewCell" customModule="BOCapp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="584" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripperTableViewCell" rowHeight="75" id="frr-VC-Tva" customClass="TrippersTableViewCell" customModule="BOCapp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="584" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="frr-VC-Tva" id="BvG-nf-No4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="74"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWQ-ea-1Bl">
-                                                            <rect key="frame" x="13" y="8" width="476" height="27"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5r-Y0-euI">
+                                                            <rect key="frame" x="-66" y="-27" width="45" height="45"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1H-C0-1Y3">
+                                                            <rect key="frame" x="0.0" y="8" width="58" height="58"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="58" id="CL9-al-L3p"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWQ-ea-1Bl">
+                                                            <rect key="frame" x="74" y="23" width="476" height="27"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="o5r-Y0-euI" firstAttribute="top" secondItem="BvG-nf-No4" secondAttribute="topMargin" constant="-35" id="3T3-Xd-yNy"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="o5r-Y0-euI" secondAttribute="bottom" constant="48" id="ANe-oU-GH1"/>
+                                                        <constraint firstItem="c1H-C0-1Y3" firstAttribute="leading" secondItem="BvG-nf-No4" secondAttribute="leading" id="QD4-Ge-bBQ"/>
+                                                        <constraint firstItem="c1H-C0-1Y3" firstAttribute="leading" secondItem="o5r-Y0-euI" secondAttribute="trailing" constant="21" id="YRz-PD-sxB"/>
+                                                        <constraint firstItem="c1H-C0-1Y3" firstAttribute="bottom" secondItem="BvG-nf-No4" secondAttribute="bottomMargin" id="erW-VQ-ZrR"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="MWQ-ea-1Bl" secondAttribute="trailing" constant="26" id="esV-CJ-nXQ"/>
+                                                        <constraint firstItem="o5r-Y0-euI" firstAttribute="leading" secondItem="BvG-nf-No4" secondAttribute="leadingMargin" constant="-74" id="iL1-Io-mmM"/>
+                                                        <constraint firstItem="c1H-C0-1Y3" firstAttribute="centerY" secondItem="MWQ-ea-1Bl" secondAttribute="centerY" id="kv0-Zv-ajF"/>
+                                                        <constraint firstItem="MWQ-ea-1Bl" firstAttribute="top" secondItem="BvG-nf-No4" secondAttribute="topMargin" constant="15" id="oih-Yr-nbt"/>
+                                                        <constraint firstItem="c1H-C0-1Y3" firstAttribute="top" secondItem="BvG-nf-No4" secondAttribute="topMargin" id="qmL-mA-d2V"/>
+                                                        <constraint firstItem="MWQ-ea-1Bl" firstAttribute="leading" secondItem="c1H-C0-1Y3" secondAttribute="trailing" constant="16" id="rnV-QS-bpT"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="tripperImage" destination="c1H-C0-1Y3" id="nqW-gk-Hbs"/>
                                                     <outlet property="tripperName" destination="MWQ-ea-1Bl" id="U6V-qg-xqp"/>
                                                 </connections>
                                             </tableViewCell>
@@ -288,7 +311,7 @@
                         <outlet property="tripName" destination="fHu-df-u78" id="z0G-Lk-Ze7"/>
                         <outlet property="tripPicture" destination="bpZ-hO-9w5" id="iDc-pR-VmJ"/>
                         <outlet property="tripView" destination="XUS-eG-o9y" id="z8B-sP-B92"/>
-                        <outlet property="trippersTableView" destination="rTi-j7-0Ug" id="dFA-9c-h4K"/>
+                        <outlet property="trippersTableView" destination="rTi-j7-0Ug" id="5Eg-5j-imT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
