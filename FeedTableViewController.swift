@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController, CreateTripDataSource, TripViewControllerDelegate {  // Adopts necessary protocols for delegate and datasource
+class FeedTableViewController: UITableViewController, CreateTripDelegate, TripViewControllerDelegate {  // Adopts necessary protocols for delegate and datasource
     
     // MARK: Properties
     
@@ -69,6 +69,7 @@ class FeedTableViewController: UITableViewController, CreateTripDataSource, Trip
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+                self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
         

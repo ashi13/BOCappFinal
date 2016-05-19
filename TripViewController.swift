@@ -107,9 +107,6 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayAlert("Welcome aboard")
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
-        
-        tripAvailibility.text = String(10-(trip?.tripMembers.count)!) + "/10 spots available"
-        
     }
     
     func displayAlert(text: String) {
