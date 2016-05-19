@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController, CreateTripDataSource {  // Adopts necessary protocols for delegate and datasource
+class FeedTableViewController: UITableViewController, CreateTripDataSource, TripViewControllerDelegate {  // Adopts necessary protocols for delegate and datasource
     
     // MARK: Properties
     
@@ -36,8 +36,24 @@ class FeedTableViewController: UITableViewController, CreateTripDataSource {  //
         return users
     }
     
+    func addTripMember(member: UserProfile, toTrip: Trip) {
+        print("called")
+        for(var i = 0; i < trips.count; i+=1){
+            if trips[i].title == toTrip.title {
+                print("found trip")
+                print(trips[i].tripMembers.count)
+                trips[i].tripMembers.append(member)
+                print(trips[i].tripMembers.count)
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         //tripTableView.dataSource = self
         //tripTableView.delegate = self
@@ -180,6 +196,7 @@ class FeedTableViewController: UITableViewController, CreateTripDataSource {  //
 //            let tripDetailViewController = nav.topViewController as! TripViewController
             
             let tripDetailViewController = segue.destinationViewController as! TripViewController
+            tripDetailViewController.delegate = self
             
             // Provide access to trip selected in main view
             if let selectedTripCell = sender as? TripTableViewCell {  // Selected TripTableViewCell

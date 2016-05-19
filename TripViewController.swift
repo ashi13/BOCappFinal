@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol TripViewControllerDelegate {
+    func addTripMember(member: UserProfile, toTrip: Trip)
+}
+
 class TripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { //, TripViewDataSource {
  
+    var delegate: TripViewControllerDelegate?
     
     // MARK: Properties for trip view
     @IBOutlet weak var tripPicture: UIImageView!
@@ -94,9 +99,11 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         //var currentUser = UserProfile(firstName: defaults.stringForKey("firstName")!, lastName: defaults.stringForKey("lastName")!, classYear: Int(defaults.stringForKey("classYear")!)!, isLeader: true)
         
         print(trip?.tripMembers.count)
-        trip?.tripMembers.append(currentUser)
+        //trip?.tripMembers.append(currentUser)
         confirmationAlert()
         print(trip?.tripMembers.count)
+        
+        delegate?.addTripMember(currentUser, toTrip: trip!)
         
     }
     
