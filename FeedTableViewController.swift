@@ -8,13 +8,14 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController {  // Adopts necessary protocols for delegate and datasource
+class FeedTableViewController: UITableViewController, CreateTripDataSource {  // Adopts necessary protocols for delegate and datasource
     
     // MARK: Properties
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var trips = [Trip]()
+    var users = [UserProfile]()
     
     /* Function loads predefined trips to show in trip feed */
     func loadSampleTrips() {
@@ -23,6 +24,17 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
         
     }
     
+    func loadSampleUsers() {
+        users = [UserProfiles().AndrewMurowchick!, UserProfiles().AlexShi!]
+    }
+    
+    func addTrip(trip: Trip){
+        trips.insert(trip, atIndex: 0)
+    }
+    
+    func getLeaders() -> [UserProfile] {
+        return users
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +44,7 @@ class FeedTableViewController: UITableViewController {  // Adopts necessary prot
         
         // Load sample data
         loadSampleTrips()
+        loadSampleUsers()
         
         // For SWReveal sidebar
         if self.revealViewController() != nil {
