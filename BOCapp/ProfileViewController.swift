@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -31,10 +31,38 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    /* Image picker methods */
+
+    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+        //nameTextField.resignFirstResponder()
+        
+        print("as")
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .PhotoLibrary
+        
+        imagePickerController.delegate = self
+        
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        profileImage.image = selectedImage
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 //    override func viewDidLoad() {

@@ -28,6 +28,7 @@
 		D77451511CC68A6D00AB163F /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77451501CC68A6D00AB163F /* Trips.swift */; };
 		D782EF611CD7A9CB00F4BF30 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782EF601CD7A9CB00F4BF30 /* TripTableViewCell.swift */; };
 		D78B859B1CE18FFB007627EB /* UserProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B859A1CE18FFB007627EB /* UserProfiles.swift */; };
+		D7E5AF221CEE2220003D5D03 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5AF211CEE2220003D5D03 /* SideBarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D77451501CC68A6D00AB163F /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		D782EF601CD7A9CB00F4BF30 /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		D78B859A1CE18FFB007627EB /* UserProfiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfiles.swift; path = ../UserProfiles.swift; sourceTree = "<group>"; };
+		D7E5AF211CEE2220003D5D03 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				D77451201CC6883E00AB163F /* AppDelegate.swift */,
 				D77451241CC6883E00AB163F /* Main.storyboard */,
 				D70D23961CED13DE00C18563 /* CreateTripViewController.swift */,
+				D7E5AF211CEE2220003D5D03 /* SideBarTableViewController.swift */,
 				D3DDCC331CE1828F00360FEC /* PaddingLabel.swift */,
 				D309C58E1CE03F4B0056FD8A /* SWRevealViewController */,
 				D7F796541CD96647009D8ECF /* Trip View */,
@@ -346,6 +349,7 @@
 				D77451211CC6883E00AB163F /* AppDelegate.swift in Sources */,
 				D71A5C531CECDC6F00D1688F /* UserLoginViewController.swift in Sources */,
 				D309C58D1CE03E5A0056FD8A /* SWRevealViewController.m in Sources */,
+				D7E5AF221CEE2220003D5D03 /* SideBarTableViewController.swift in Sources */,
 				D3DDCC341CE1828F00360FEC /* PaddingLabel.swift in Sources */,
 				D71A5C511CECD6DE00D1688F /* RegisterUserViewController.swift in Sources */,
 				D70D23971CED13DE00C18563 /* CreateTripViewController.swift in Sources */,
