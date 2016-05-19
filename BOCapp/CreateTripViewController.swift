@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol CreateTripDataSource : class {
+protocol CreateTripDelegate {
     func addTrip(trip: Trip)
     func getLeaders() -> [UserProfile]
 }
 
 class CreateTripViewController: UIViewController {
     
-    weak var dataSource: CreateTripDataSource?
+    var delegate: CreateTripDelegate?
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tripName: UITextView!
@@ -31,7 +31,7 @@ class CreateTripViewController: UIViewController {
     @IBAction func createTripPressed(sender: UIBarButtonItem) {
         
         let leaderName = leaderPicker.description
-        var allUsers = dataSource?.getLeaders()
+        var allUsers = delegate?.getLeaders()
         var leader = UserProfile()
   
         for i in 0...allUsers!.count {
@@ -42,7 +42,7 @@ class CreateTripViewController: UIViewController {
         
         let currentTrip = Trip(title: tripName.description, image: tripImage.image!, leader: leader, description: tripDescription.description, location: location.description, date: tripDate.date, tripMembers: [leader])
         
-        dataSource?.addTrip(currentTrip)
+        delegate?.addTrip(currentTrip)
         
     }
     
@@ -55,6 +55,9 @@ class CreateTripViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         createTripView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
+        
+        var feedVC = FeedTableViewController()
+        self.delegate = feedVC
         
     }
     
