@@ -17,6 +17,7 @@ class TripTableViewCell: UITableViewCell {
     @IBOutlet weak var leaderPicture: UIImageView!
     @IBOutlet weak var leaderName: UILabel!
     @IBOutlet weak var tripCapacity: UILabel!
+    @IBOutlet weak var tripDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -39,6 +39,7 @@ class Trip {
         self.imageName = imageName
         self.image = UIImage(named: imageName)
         self.location = location
+        
         self.date = date
         
         self.leader = leader
