@@ -10,6 +10,7 @@ import UIKit
 
 protocol TripViewControllerDelegate {
     func addTripMember(member: UserProfile, toTrip: Trip)
+    func getLeaders() -> [UserProfile]
 }
 
 class TripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { //, TripViewDataSource {
@@ -93,15 +94,17 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         let classYear = defaults.integerForKey("classYear")
         
         let currentUser = UserProfile(firstName: firstName, lastName: lastName, classYear: classYear, isLeader: true)
+
+        let users = delegate?.getLeaders()
         
-    
+        for i in 0...users!.count - 1 {
+            if users![i].firstName == firstName && users![i].lastName == lastName {
+                displayAlert("Already tripping")
+                return
+            }
+        }
         
-        //var currentUser = UserProfile(firstName: defaults.stringForKey("firstName")!, lastName: defaults.stringForKey("lastName")!, classYear: Int(defaults.stringForKey("classYear")!)!, isLeader: true)
-        
-        print(trip?.tripMembers.count)
-        //trip?.tripMembers.append(currentUser)
-        confirmationAlert()
-        print(trip?.tripMembers.count)
+        displayAlert("Welcome aboard")
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
         
@@ -109,10 +112,10 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func confirmationAlert() {
-        let alert = UIAlertController(title: "Alert", message: "Welcome Aboard", preferredStyle: UIAlertControllerStyle.Alert)
+    func displayAlert(text: String) {
+        let alert = UIAlertController(title: "BOC", message: text, preferredStyle: UIAlertControllerStyle.Alert)
         
-        let confirm = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.Default, handler: { action in self.dismissViewControllerAnimated(true, completion: nil) } )
+        let confirm = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.Default, handler: nil)
         
         alert.addAction(confirm)
         

@@ -10,8 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var classYear: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -28,10 +29,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
         
-        name.text = NSUserDefaults.standardUserDefaults().stringForKey("firstName")
-        
+        firstName.text = NSUserDefaults.standardUserDefaults().stringForKey("firstName")
+        lastName.text = NSUserDefaults.standardUserDefaults().stringForKey("lastName")
+        classYear.text = String(NSUserDefaults.standardUserDefaults().integerForKey("classYear"))
 
-        // Do any additional setup after loading the view.
     }
     
     
