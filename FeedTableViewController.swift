@@ -48,7 +48,9 @@ class FeedTableViewController: UITableViewController, CreateTripDataSource, Trip
         }
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
