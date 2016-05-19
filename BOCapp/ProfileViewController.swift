@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var lastName: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -25,6 +26,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
         
         name.text = NSUserDefaults.standardUserDefaults().stringForKey("firstName")
         
