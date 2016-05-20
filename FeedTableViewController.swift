@@ -44,8 +44,13 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
                 print(trips[i].tripMembers.count)
                 trips[i].tripMembers.append(member)
                 print(trips[i].tripMembers.count)
+                //addUser(member)
             }
         }
+    }
+    
+    func addUser(user: UserProfile) {
+        users.append(user)
     }
     
     override func viewWillAppear(animated: Bool) {

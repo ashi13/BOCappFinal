@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterUserViewController: UIViewController {
+class RegisterUserViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -21,6 +21,9 @@ class RegisterUserViewController: UIViewController {
     @IBOutlet weak var allergiesTextView: UITextView!
     
     @IBOutlet weak var registerView: UIScrollView!
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +90,29 @@ class RegisterUserViewController: UIViewController {
         
     }
     
+    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+        
+        print("as")
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .PhotoLibrary
+        
+        imagePickerController.delegate = self
+        
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        profileImage.image = selectedImage
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        
+    }
     
     func displayAlert(text: String) {
         let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertControllerStyle.Alert)

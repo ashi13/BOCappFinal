@@ -567,13 +567,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Cy-hye">
-                                        <rect key="frame" x="272" y="654" width="57" height="30"/>
-                                        <state key="normal" title="Register"/>
-                                        <connections>
-                                            <action selector="registerPressed:" destination="pAS-IU-MaS" eventType="touchUpInside" id="M18-hT-wWx"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94q-Pw-Iwg">
                                         <rect key="frame" x="272" y="526" width="59" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -590,6 +583,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Cy-hye">
+                                        <rect key="frame" x="272" y="797" width="57" height="30"/>
+                                        <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="pAS-IU-MaS" eventType="touchUpInside" id="M18-hT-wWx"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stockUserPicture" translatesAutoresizingMaskIntoConstraints="NO" id="UL8-UO-20C">
+                                        <rect key="frame" x="255" y="653" width="93" height="97"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GvA-4V-9Ct"/>
+                                            <constraint firstAttribute="width" secondItem="UL8-UO-20C" secondAttribute="height" multiplier="93:97" id="N94-F6-fai"/>
+                                            <constraint firstAttribute="width" constant="100" id="Yax-vx-G8s"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cWa-8E-QSM" appends="YES" id="Hwi-fs-Izs"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="51P-iT-8ZO" firstAttribute="top" secondItem="MXt-1Y-jkj" secondAttribute="bottom" constant="20" id="25S-hw-brA"/>
@@ -614,6 +626,7 @@
                                     <constraint firstItem="28F-85-Ct1" firstAttribute="leading" secondItem="MXt-1Y-jkj" secondAttribute="leading" id="L1J-Zp-Xac"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Epf-mi-MeW" secondAttribute="trailing" constant="10" id="LvE-bX-VZ6"/>
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="leading" secondItem="MXt-1Y-jkj" secondAttribute="leading" id="Mzg-Oj-JbL"/>
+                                    <constraint firstItem="vr2-Cy-hye" firstAttribute="centerX" secondItem="UL8-UO-20C" secondAttribute="centerX" id="NJY-2e-TxG"/>
                                     <constraint firstItem="7lH-b5-vlQ" firstAttribute="top" secondItem="Epf-mi-MeW" secondAttribute="bottom" constant="20" id="OGP-FK-tEw"/>
                                     <constraint firstItem="MXt-1Y-jkj" firstAttribute="top" secondItem="u15-dT-cP7" secondAttribute="bottom" constant="10" id="OrF-aA-f8M"/>
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="P7P-de-TtH"/>
@@ -629,6 +642,7 @@
                                     <constraint firstItem="XHR-NH-ALh" firstAttribute="leading" secondItem="Nyk-w5-TTA" secondAttribute="leading" id="ZU0-zN-NJi"/>
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="top" secondItem="ks3-Zd-dF1" secondAttribute="bottom" constant="10" id="ZWi-I8-VzF"/>
                                     <constraint firstItem="enY-vK-s1p" firstAttribute="trailing" secondItem="MXt-1Y-jkj" secondAttribute="trailing" id="bNO-Wr-PdQ"/>
+                                    <constraint firstItem="UL8-UO-20C" firstAttribute="top" secondItem="XHR-NH-ALh" secondAttribute="bottom" constant="20" id="c3E-Va-quf"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHR-NH-ALh" secondAttribute="trailing" constant="10" id="cGt-KY-pvB"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vr2-Cy-hye" secondAttribute="bottom" constant="20" id="cRh-CM-rDA"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="28F-85-Ct1" secondAttribute="trailing" constant="10" id="cmX-KW-AHD"/>
@@ -649,6 +663,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="enY-vK-s1p" secondAttribute="trailing" constant="10" id="tmn-dj-VQo"/>
                                     <constraint firstItem="Epf-mi-MeW" firstAttribute="top" secondItem="TyQ-1h-cjr" secondAttribute="bottom" constant="10" id="uC6-AG-5sl"/>
                                     <constraint firstItem="ks3-Zd-dF1" firstAttribute="top" secondItem="enY-vK-s1p" secondAttribute="bottom" constant="20" id="uXD-BH-iJN"/>
+                                    <constraint firstItem="vr2-Cy-hye" firstAttribute="top" secondItem="UL8-UO-20C" secondAttribute="bottom" constant="20" id="uYA-bm-xeZ"/>
                                     <constraint firstItem="ls9-HL-nxQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NCJ-59-Lbo" secondAttribute="leading" constant="10" id="w1y-ag-AP9"/>
                                     <constraint firstItem="Nyk-w5-TTA" firstAttribute="centerX" secondItem="MXt-1Y-jkj" secondAttribute="centerX" id="w9i-xo-mSV"/>
                                     <constraint firstItem="jdp-Ne-Qc7" firstAttribute="centerX" secondItem="NCJ-59-Lbo" secondAttribute="centerX" id="wXH-Ye-pSV"/>
@@ -660,6 +675,7 @@
                                         <exclude reference="K3T-vy-1Zh"/>
                                         <exclude reference="VNq-YO-rdu"/>
                                         <exclude reference="cRh-CM-rDA"/>
+                                        <exclude reference="l48-kP-Qt6"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -696,11 +712,17 @@
                         <outlet property="lastNameTextField" destination="enY-vK-s1p" id="hVM-ss-laS"/>
                         <outlet property="passwordRepeatTextField" destination="ls9-HL-nxQ" id="34f-1N-rf5"/>
                         <outlet property="passwordTextField" destination="28F-85-Ct1" id="9YB-XB-JHc"/>
+                        <outlet property="profileImage" destination="UL8-UO-20C" id="VUN-cR-2N9"/>
                         <outlet property="registerView" destination="NCJ-59-Lbo" id="RZI-dU-gc7"/>
                         <outlet property="usernameTextField" destination="MXt-1Y-jkj" id="d5t-Sw-7ap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RA3-NK-ByT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cWa-8E-QSM">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="pAS-IU-MaS" id="lmg-6C-yD0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="955" y="1337"/>
         </scene>
@@ -1247,6 +1269,7 @@
     </scenes>
     <resources>
         <image name="blank_user_picture 2" width="1200" height="1200"/>
+        <image name="stockUserPicture" width="236" height="264"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ior-cV-4Ls"/>

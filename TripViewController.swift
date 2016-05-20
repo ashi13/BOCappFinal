@@ -107,6 +107,8 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayAlert("Welcome aboard")
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
+        
+        tripAvailibility.text = String(10-trip!.tripMembers.count) + "/10 spots available"
     }
     
     func displayAlert(text: String) {
@@ -134,14 +136,23 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
             navigationItem.title = trip.title
             tripPicture.image = trip.image
             tripName.text = trip.title
+            tripName.layer.cornerRadius = 5.0
+            tripName.clipsToBounds = true
             
             tripDescription.text = trip.description
             tripDescription.lineBreakMode = .ByWordWrapping
             tripDescription.numberOfLines = 0
+            tripDescription.layer.cornerRadius = 5.0
+            tripDescription.clipsToBounds = true
             
             tripLocation.text = trip.location
+            tripLocation.layer.cornerRadius = 5.0
+            tripLocation.clipsToBounds = true
             
             leaderName.text = trip.leader.firstName + " " + trip.leader.lastName
+            leaderName.layer.cornerRadius = 5.0
+            leaderName.clipsToBounds = true
+            
             leaderPicture.image = trip.leader.image
             leaderPicture.layer.cornerRadius = 6.0
             leaderPicture.clipsToBounds = true
