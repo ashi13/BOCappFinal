@@ -36,7 +36,7 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     
     func addTripMember(member: UserProfile, toTrip: Trip) {
         print("called")
-        for(var i = 0; i < trips.count; i+=1){
+        for i in 0...trips.count - 1 {
             if trips[i].title == toTrip.title {
                 print("found trip")
                 print(trips[i].tripMembers.count)
@@ -65,7 +65,7 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
         // For SWReveal sidebar
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
                 self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }

@@ -51,12 +51,12 @@ class CreateTripViewController: UIViewController {
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         createTripView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterUserViewController.dismissKeyboard)))
         
-        var feedVC = FeedTableViewController()
+        let feedVC = FeedTableViewController()
         self.delegate = feedVC
         
     }

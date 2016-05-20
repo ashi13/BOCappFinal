@@ -98,7 +98,10 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         let users = delegate?.getLeaders()
         
         for i in 0...users!.count - 1 {
+            print("checked one")
+            print(firstName + " " + lastName + " =? " + users![i].firstName + " " + users![i].lastName)
             if users![i].firstName == firstName && users![i].lastName == lastName {
+                //print(firstName + " " + lastName + " =? " + users![i].firstName + " " + users![i].lastName)
                 displayAlert("Already tripping")
                 return
             }
@@ -107,6 +110,9 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         displayAlert("Welcome aboard")
         
         delegate?.addTripMember(currentUser, toTrip: trip!)
+        
+        // Update trip capacity
+        tripAvailibility.text = String(10 - trip!.tripMembers.count) + "/10 spots available"
     }
     
     func displayAlert(text: String) {
