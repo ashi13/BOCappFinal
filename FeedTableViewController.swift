@@ -16,18 +16,17 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     
     var trips = [Trip]()
     var users = [UserProfile]()
+    var trippers = [UserProfile]()
     
-    /* Function loads predefined trips to show in trip feed */
+    /* Method loads predefined trips to show in trip feed */
     func loadSampleTrips() {
-        
         trips = [Trips().kayakTrip!, Trips().mountainTrip!, Trips().whiteWater!, Trips().hiking1!, Trips().hiking2!, Trips().surfing!, Trips().surfing2!]
-        
     }
-    
+    /* Method loads predefined UserProfiles to trip feed */
     func loadSampleUsers() {
         users = [UserProfiles().AndrewMurowchick!, UserProfiles().AlexShi!]
     }
-    
+
     func addTrip(trip: Trip){
         trips.insert(trip, atIndex: 0)
     }
@@ -35,10 +34,13 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     func getLeaders() -> [UserProfile] {
         return users
     }
+    func getTrippers(trip: Trip) -> [UserProfile] {
+        return trip.tripMembers
+    }
     
     func addTripMember(member: UserProfile, toTrip: Trip) {
         print("called")
-        for(var i = 0; i < trips.count; i+=1){
+        for i in 0...trips.count - 1 {
             if trips[i].title == toTrip.title {
                 print("found trip")
                 print(trips[i].tripMembers.count)
@@ -72,7 +74,7 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
         // For SWReveal sidebar
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
                 self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }

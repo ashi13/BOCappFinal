@@ -33,6 +33,7 @@ class Trip {
     
     // MARK: Initialization
     
+    /* Initialize with UIImage */
     init(title: String, image: UIImage, leader: UserProfile, description: String, location: String, date: NSDate, tripMembers: [UserProfile]) {
         
         self.title = title
@@ -48,6 +49,7 @@ class Trip {
         self.tripMembers = tripMembers
     }
     
+    /* Initialize with string name for UIImage */
     init?(title: String, imageName: String, leader: UserProfile, description: String, location: String, date: NSDate, tripMembers: [UserProfile]){
         
         self.title = title
