@@ -11,6 +11,7 @@ import UIKit
 protocol TripViewControllerDelegate {
     func addTripMember(member: UserProfile, toTrip: Trip)
     func getLeaders() -> [UserProfile]
+    func getTrippers(trip: Trip) -> [UserProfile]
 }
 
 class TripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { //, TripViewDataSource {
@@ -26,18 +27,7 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var leaderName: PaddingLabel!
     @IBOutlet weak var leaderPicture: UIImageView!
     @IBOutlet weak var tripAvailibility: PaddingLabel!
-    
-//    @IBOutlet weak var tripView: TripView! {
-//        didSet {
-//            tripView.dataSource = self
-//        }
-//    }
-//    
-//    func getTripInfo() -> Trip? {
-//        return nil
-//    }
-//    
-//    var model = Trips()
+
 
     @IBOutlet weak var tripView: TripView!  // UIScrollView
     @IBOutlet weak var trippersTableView: UITableView!
@@ -55,32 +45,26 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//    }
-    
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        print("kjshfkjhsd")
         
         let tripperCellIdentifier = "TrippersTableViewCell"
         
         let cell = tableView.dequeueReusableCellWithIdentifier(tripperCellIdentifier, forIndexPath: indexPath) as! TrippersTableViewCell
         
-        
+        /*
         cell.tripperName.text = "Row #\(indexPath.row)"
-        //cell.detailTextLabel.text = "Subtitle #\(indexPath.row)"
+        cell.detailTextLabel.text = "Subtitle #\(indexPath.row)"
         
-        //let currentTrip = trip    // Grabs the right cell to load data to
-        //let tripMember = trip!.tripMembers[indexPath.row]
+        let currentTrip = trip    // Grabs the right cell to load data to
+        let tripMember = trip!.tripMembers[indexPath.row]
         
         // Load data to individual elements of TripTableViewCell
-//        cell.tripperName.text = currentTrip!.tripMembers[indexPath.row].firstName + " " + currentTrip!.tripMembers[indexPath.row].lastName
+        cell.tripperName.text = currentTrip!.tripMembers[indexPath.row].firstName + " " + currentTrip!.tripMembers[indexPath.row].lastName
         
-        //cell.tripperName.text = tripMember.firstName
-        //cell.tripperName.text = "aksjdakj::"
-        
+        cell.tripperName.text = tripMember.firstName
+        cell.tripperName.text = "aksjdakj::"
+        */
+ 
         return cell
     }
     
@@ -94,21 +78,17 @@ class TripViewController: UIViewController, UITableViewDelegate, UITableViewData
         let classYear = defaults.integerForKey("classYear")
         
         let currentUser = UserProfile(firstName: firstName, lastName: lastName, classYear: classYear, isLeader: true)
-
-        let users = delegate?.getLeaders()
         
-        for i in 0...users!.count - 1 {
-            print("checked one")
-            print(firstName + " " + lastName + " =? " + users![i].firstName + " " + users![i].lastName)
-            if users![i].firstName == firstName && users![i].lastName == lastName {
-                //print(firstName + " " + lastName + " =? " + users![i].firstName + " " + users![i].lastName)
+        let trippers = delegate?.getTrippers(trip!)
+        
+        for i in 0..<trippers!.count {
+            if trippers![i].firstName == firstName && trippers![i].lastName == lastName {
                 displayAlert("Already tripping")
                 return
             }
         }
         
         displayAlert("Welcome aboard")
-        
         delegate?.addTripMember(currentUser, toTrip: trip!)
         
         // Update trip capacity

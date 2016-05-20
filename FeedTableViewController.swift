@@ -16,6 +16,7 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     
     var trips = [Trip]()
     var users = [UserProfile]()
+    var trippers = [UserProfile]()
     
     /* Method loads predefined trips to show in trip feed */
     func loadSampleTrips() {
@@ -32,6 +33,9 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     
     func getLeaders() -> [UserProfile] {
         return users
+    }
+    func getTrippers(trip: Trip) -> [UserProfile] {
+        return trip.tripMembers
     }
     
     func addTripMember(member: UserProfile, toTrip: Trip) {
