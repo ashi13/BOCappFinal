@@ -17,17 +17,15 @@ class FeedTableViewController: UITableViewController, CreateTripDelegate, TripVi
     var trips = [Trip]()
     var users = [UserProfile]()
     
-    /* Function loads predefined trips to show in trip feed */
+    /* Method loads predefined trips to show in trip feed */
     func loadSampleTrips() {
-        
         trips = [Trips().kayakTrip!, Trips().mountainTrip!, Trips().whiteWater!, Trips().hiking1!, Trips().hiking2!, Trips().surfing!, Trips().surfing2!]
-        
     }
-    
+    /* Method loads predefined UserProfiles to trip feed */
     func loadSampleUsers() {
         users = [UserProfiles().AndrewMurowchick!, UserProfiles().AlexShi!]
     }
-    
+
     func addTrip(trip: Trip){
         trips.insert(trip, atIndex: 0)
     }
